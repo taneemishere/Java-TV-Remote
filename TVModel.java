@@ -7,20 +7,18 @@ public class TVModel {
     public int volume = 0;
     private Boolean on = false;
 
-    public void turnOn() {
-        this.on = true;
-        System.out.println("TV is turned on!");
+    public void power() {
+        if(on == false){
+            this.on = true;
+            System.out.println("TV is turned on!");
+        }
+        else if(on == true){
+            this.on = false;
+            System.out.println("TV is turnd off!");
+        }
+
     }
     
-    public void turnOff() {
-        if (on == false) {
-            System.out.println("TV is already off!");
-        }
-        else{
-            this.on = false;
-            System.out.println("TV is turned off!");
-        }
-    }
 
     public void setChannel(int channelNo) {
         if (on == true) {
